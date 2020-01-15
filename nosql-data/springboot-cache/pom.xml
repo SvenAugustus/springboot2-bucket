@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2018-2025 the original author or authors.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+    <groupId>com.github.flysium-io</groupId>
+    <artifactId>springboot-2-bucket-pom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>springboot-cache</artifactId>
+  <properties>
+    <main.basedir>${basedir}/../..</main.basedir>
+  </properties>
+  <dependencies>
+    <!-- Compile -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-cache</artifactId>
+    </dependency>
+    <!-- Only used to expose cache metrics -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <!-- Test -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>cache-jcache</id>
+      <dependencies>
+        <dependency>
+          <groupId>javax.cache</groupId>
+          <artifactId>cache-api</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-caffeine</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.github.ben-manes.caffeine</groupId>
+          <artifactId>caffeine</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-couchbase</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.couchbase.client</groupId>
+          <artifactId>java-client</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.couchbase.client</groupId>
+          <artifactId>couchbase-spring-cache</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-ehcache2</id>
+      <dependencies>
+        <dependency>
+          <groupId>net.sf.ehcache</groupId>
+          <artifactId>ehcache</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-ehcache</id>
+      <dependencies>
+        <dependency>
+          <groupId>javax.cache</groupId>
+          <artifactId>cache-api</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.ehcache</groupId>
+          <artifactId>ehcache</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-hazelcast</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.hazelcast</groupId>
+          <artifactId>hazelcast</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.hazelcast</groupId>
+          <artifactId>hazelcast-spring</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-infinispan</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.infinispan</groupId>
+          <artifactId>infinispan-spring4-embedded</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.infinispan</groupId>
+          <artifactId>infinispan-jcache</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-redis</id>
+      <dependencies>
+        <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>cache-guava</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>18.0</version>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- autowire byName 注入 -->
+  <bean id="personAutowireByName" class="xyz.flysium.spring.samples.Person2"
+    autowire="byName">
+  </bean>
+  <bean id="pet" class="xyz.flysium.spring.samples.Pet">
+    <property name="name" value="kele"/>
+  </bean>
+
+</beans>

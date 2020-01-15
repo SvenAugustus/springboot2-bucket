@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: development
+  application:
+    name: spring-boot2-profile
+
+# server
+server:
+  port: 8250
+
+
+################################
+#### profile - development ####
+################################
+---
+spring:
+  profiles: development
+  resources:
+    chain:
+      cache: false
+
+
+################################
+#### profile - production ####
+################################
+---
+spring:
+  profiles: production
+  resources:
+    chain:
+      cache: true
+      strategy:
+        content:
+          enabled: true
+    cache:
+      period: 7200
+
+

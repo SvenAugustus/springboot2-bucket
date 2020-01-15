@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: spring-boot2-sql-database-jpa-simple
+
+  datasource:
+    ## 数据库连接设置
+    #    url: jdbc:mysql://localhost:3306/test
+    #    username: root  #配置数据库用户名
+    #    password: root123  #配置数据库密码
+    #    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:h2:mem:test  #配置h2数据库的连接地址
+    username: sa  #配置数据库用户名
+    password: sa  #配置数据库密码
+    driverClassName: org.h2.Driver  #配置JDBC Driver
+    ## 数据初始化设置, Spring Boot 会自动读取 classpath:schema-${platform}.sql 以及 data-${platform}.sql
+    platform: h2  #表明使用的数据库平台是h2
+    # Spring Boot automatically creates the schema of an embedded DataSource.
+    # This behaviour can be customized by using the spring.datasource.initialization-mode property.
+    initialization-mode: always
+
+  ## H2 Web Console (H2ConsoleProperties)
+  h2:
+    console:
+      enabled: true  #进行该配置，程序开启时就会启动 h2 web console。当然这是默认的，如果你不想在启动程序时启动 h2 web console，那么就设置为false。
+      path: /h2  #进行该配置，你就可以通过 YOUR_URL/h2 访问h2 web console。YOUR_URL是你程序的访问URl。
+      settings:
+        trace: false  # Whether to enable trace output.
+        web-allow-others: true  # 进行该配置后，h2 web console。否则只能在本机访问。
+
+  # JPA 相关配置
+  jpa:
+    # 开启open-in-view的意义: 在事务外也可以访问懒加载的数据
+    #
+    # hibernate 允许对关联对象、属性进行延迟加载，但是必须保证延迟加载的操作限于同一个 Hibernate Session 范围之内进行。
+    # 如果 Service 层返回一个启用了延迟加载功能的领域对象给 Web 层，
+    # 当 Web 层访问到那些需要延迟加载的数据时，由于加载领域对象的 Hibernate Session 已经关闭，这些导致延迟加载数据的访问异常。
+    #
+    # 把一个Hibernate Session和一次完整的请求过程对应的线程相绑定。目的是为了实现”Open Session in View”的模式。
+    # 例如： 它允许在事务提交之后延迟加载显示所需要的对象。 
+    # OpenSessionInViewFilter 过滤器将 Hibernate Session 绑定到请求线程中，它将自动被 spring 的事务管理器探测到。
+    # 所以 OpenSessionInViewFilter 适用于 Service 层使用HibernateTransactionManager 或 JtaTransactionManager 进行事务管理的环境，也可以用于非事务只读的数据操作中。
+    open-in-view: true
+    # 默认的存储引擎切换为 InnoDB
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      # 配置指明在程序启动的时候要删除并且创建实体类对应的表。
+      # 这个参数很危险，create-drop 因为他会把对应的表删除掉然后重建。
+      # 所以千万不要在生产环境中使用。只有在测试环境中，一开始初始化数据库结构的时候才能使用一次。
+      # 如果使用 H2 等嵌入数据库，如果不设置 none， 会自动 create-drop， 那么前面设置  spring.datasource.data 的 初始化DML脚本并不会生效。
+      ddl-auto: none
+
+# server
+server:
+  port: 8313
+
+logging:
+  level:
+    org:
+      hibernate: DEBUG

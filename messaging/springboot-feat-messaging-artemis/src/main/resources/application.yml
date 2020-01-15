@@ -1,0 +1,43 @@
+# server
+server:
+  port: 8342
+
+spring:
+  profiles:
+    active: topic-consumer,queue-consumer
+  application:
+    name: spring-boot2-artemis
+  # Spring Boot 配置方式不支持 artemis 集群配置。
+  artemis:
+    mode: native
+    host: 127.0.0.1
+    port: 61616
+    user: admin
+    password: admin123
+    pool:
+      enabled: true
+      max-connections: 20
+  jms:
+     # 点对点和发布订阅模型一起使用的情况, 这里暂时设置为 false, 通过定义 JmsListenerContainerFactory 实现
+#    pub-sub-domain: true
+     template:
+       # deliveryMode, priority, timeToLive 的开关，要生效，必须配置explicitQosEnabled为true，默认false
+       qos-enabled: true
+       # 保证消息持久化
+       delivery-mode: persistent
+       # the message's lifetime (in milliseconds)
+       time-to-live: 3600000
+    # 需要依赖 org.messaginghub:pooled-jms
+     cache:
+       # 减少springboot重复创建session的问题
+       enabled: true
+       session-cache-size: 50
+
+logging:
+  level:
+    root: info
+    org:
+      apache:
+        activemq: debug
+      springframework:
+        jms: debug

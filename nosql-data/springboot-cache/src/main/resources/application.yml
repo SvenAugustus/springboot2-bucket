@@ -1,0 +1,22 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  cache:
+#    type: redis
+    infinispan:
+      config: infinispan.xml
+    #    jcache:
+    #        config: ehcache3.xml
+    caffeine:
+      spec: maximumSize=200,expireAfterAccess=600s
+    redis:
+      use-key-prefix: true
+  # Redis
+  redis:
+     cluster:
+        nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+

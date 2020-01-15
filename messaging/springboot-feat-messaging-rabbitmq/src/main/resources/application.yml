@@ -1,0 +1,40 @@
+# server
+server:
+  port: 8345
+
+spring:
+  profiles:
+    active: consumer
+  application:
+    name: spring-boot2-rabbitmq
+  # Spring Boot 配置方式尚不支持 rabbitmq 集群配置。
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: mq
+    password: mq123
+    virtual-host: /
+    # 开启生产 ACK
+    publisher-confirms: true
+    # 开启发送失败退回
+    publisher-returns: true
+    template:
+      # 消息的 mandatory 参数
+      mandatory: true
+      # 默认情况下禁用重试
+      retry:
+        enabled: true
+        initial-interval: 2s
+        max-attempts: 2
+    # 开启消费 ACK
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
+
+logging:
+  level:
+    root: info
+
+

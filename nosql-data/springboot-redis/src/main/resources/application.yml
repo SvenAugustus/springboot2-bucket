@@ -1,0 +1,53 @@
+# server
+server:
+  port: 8321
+
+spring:
+  application:
+    name: spring-boot2-nosql-data-redis
+
+  redis:
+    host: 127.0.0.1
+    port: 7000
+    password: root123  # Master节点的密码 （redis.conf设置 requirepass 配置项）
+    timeout: 6000ms
+    # Cluster 模式
+    #    cluster:
+    #      nodes: 127.0.0.1:7001,127.0.0.1:7002,127.0.0.1:7003
+    #      max-redirects: 2
+    # Sentinel 模式
+    # 注意设置 protected-mode no (注意不要在互联网下使用)  或 sentinel auth-pass master-1 root123 (对应的 Master 节点密码)
+    #    sentinel:
+    #      master: master-1
+    #      nodes: 127.0.0.1:19101,127.0.0.1:19102,127.0.0.1:19103
+    # 使用的数据库索引
+    database: 1
+    # 启用SSL支持。
+    ssl: false
+    # 使用 lettuce 客户端, 建议使用。
+    # lettuce 支持 Sentinel 映射的 Master 设置密码，jedis 2.9.3 还不支持。
+    lettuce:
+      # 针对 io.lettuce.core.cluster.api.sync.RedisClusterCommands 池化
+      pool:
+        # 池在给定时间可以分配的最大连接数。使用负值无限制。
+        max-active: 50
+        # 目标为保持在池中的最小空闲连接数。这个设置只有在正面的情况下才有效果。
+        max-idle: 50
+        # 连接池的最大空闲连接数量，使用负值表示无限数量的空闲连接
+        min-idle: 10
+        # 连接分配在池被耗尽时抛出异常之前应该阻塞的最长时间量（以毫秒为单位）。使用负值可以无限期地阻止。
+        max-wait: 2000ms
+      shutdown-timeout: 100ms # Shutdown timeout.
+    # 使用 jedis 客户端，依赖 jedis jar 情况下使用
+    jedis:
+      # 针对 redis.clients.jedis.Jedis 池化
+      pool:
+        # 池在给定时间可以分配的最大连接数。使用负值无限制。
+        max-active: 50
+        # 目标为保持在池中的最小空闲连接数。这个设置只有在正面的情况下才有效果。
+        max-idle: 50
+        # 连接池的最大空闲连接数量，使用负值表示无限数量的空闲连接
+        min-idle: 10
+        # 连接分配在池被耗尽时抛出异常之前应该阻塞的最长时间量（以毫秒为单位）。使用负值可以无限期地阻止。
+        max-wait: 2000ms
+

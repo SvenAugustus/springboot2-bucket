@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-boot2-errorpage
+#  thymeleaf:
+#     enabled: true # Enable MVC Thymeleaf view resolution.
+
+# server
+server:
+  error:
+    whitelabel:
+      enabled: true # default is true
+  port: 8003
+

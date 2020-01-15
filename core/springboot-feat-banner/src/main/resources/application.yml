@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-boot2-feat-banner
+
+# server
+server:
+  port: 8232

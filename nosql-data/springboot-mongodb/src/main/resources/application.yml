@@ -1,0 +1,12 @@
+# server
+server:
+  port: 8322
+
+spring:
+  application:
+    name: spring-boot2-nosql-data-mongodb
+
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/test
+

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-boot2-cxf
+
+# server
+server:
+  port: 8296
+
+# cxf
+cxf:
+  # 默认为 /services 路径
+  path: /services
+

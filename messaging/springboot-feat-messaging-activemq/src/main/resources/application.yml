@@ -1,0 +1,44 @@
+# server
+server:
+  port: 8341
+
+spring:
+  profiles:
+    active: topic-consumer,queue-consumer
+  application:
+    name: spring-boot2-activemq
+  activemq:
+    broker-url: failover:(tcp://127.0.0.1:61616,tcp://127.0.0.1:61616)?randomize=false&priorityBackup=true
+    user: mq
+    password: mq123
+    packages:
+      trust-all: false # reason: java.lang.ClassNotFoundException: Forbidden class sample.activemq.model.UserInfo! This class is not trusted to be serialized as ObjectMessage payload.
+      trusted: com.github.flysium.io.bucket.springboot.model
+    in-memory: false # 如果需要持久化消息，请关闭 in-memory
+    #    pool:
+    #      enabled: true
+    #      max-connections: 20
+  jms:
+     # 点对点和发布订阅模型一起使用的情况, 这里暂时设置为 false, 通过定义 JmsListenerContainerFactory 实现
+#    pub-sub-domain: true
+     template:
+       # deliveryMode, priority, timeToLive 的开关，要生效，必须配置explicitQosEnabled为true，默认false
+       qos-enabled: true
+       # 保证消息持久化
+       delivery-mode: persistent
+       # the message's lifetime (in milliseconds)
+       time-to-live: 3600000
+    # 需要依赖 org.messaginghub:pooled-jms
+     cache:
+       # 减少springboot重复创建session的问题
+       enabled: true
+       session-cache-size: 50
+
+logging:
+  level:
+    root: info
+    org:
+      apache:
+        activemq: debug
+      springframework:
+        jms: debug

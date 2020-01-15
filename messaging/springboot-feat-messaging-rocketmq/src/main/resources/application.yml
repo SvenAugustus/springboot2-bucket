@@ -1,0 +1,41 @@
+# server
+server:
+  port: 8344
+
+spring:
+  profiles:
+    active: consumer,concurrently
+  application:
+    name: spring-boot2-rocketmq
+  # 这里配置H2 为了测试 RocketMQ 事务消息
+  datasource:
+    ## 数据库连接设置
+    url: jdbc:h2:mem:test  #配置h2数据库的连接地址
+    username: sa  #配置数据库用户名
+    password: sa  #配置数据库密码
+    driverClassName: org.h2.Driver  #配置JDBC Driver
+    ## 数据初始化设置
+    data: classpath:database/h2/data.sql  #进行该配置后，每次启动程序，程序都会运行resources/database/h2/data.sql文件，对数据库的数据操作。
+    schema: classpath:database/h2/schema.sql  #进行该配置后，每次启动程序，程序都会运行resources/database/h2/schema.sql文件，对数据库的结构进行操作。
+    platform: h2  #表明使用的数据库平台是h2
+  ## H2 Web Console (H2ConsoleProperties)
+  h2:
+    console:
+      enabled: true  #进行该配置，程序开启时就会启动 h2 web console。当然这是默认的，如果你不想在启动程序时启动 h2 web console，那么就设置为false。
+      path: /h2  #进行该配置，你就可以通过 YOUR_URL/h2 访问h2 web console。YOUR_URL是你程序的访问URl。
+      settings:
+        trace: false  # Whether to enable trace output.
+        web-allow-others: true  # 进行该配置后，h2 web console。否则只能在本机访问。
+
+logging:
+  level:
+    root: info
+
+apache:
+  rocketmq:
+    namesrvAddr: 127.0.0.1:9876
+    defaultTopic: TopicTest
+    defaultTag: tagA
+    producerGroup: producerGroup1
+    transactionProducerGroup: transactionProducerGroup1
+    consumerGroup: consumerGroup1

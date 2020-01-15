@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-boot2-i18n
+  # i18n
+  messages:
+    basename: demo,config.i18n.demo2
+    fallback-to-system-locale: false
+
+# server
+server:
+  port: 8027
+
+

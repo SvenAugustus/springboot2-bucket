@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <!-- 工厂注入：动态工厂 -->
+  <bean id="carFactory" class="xyz.flysium.spring.samples.factory.CarFactory"/>
+  <bean id="car" class="xyz.flysium.spring.samples.factory.Car" factory-bean="carFactory"
+    factory-method="getCar">
+    <constructor-arg value="changcheng"/>
+  </bean>
+
+  <!-- 工厂注入: 静态工厂 -->
+  <bean id="carStatic" class="xyz.flysium.spring.samples.factory.CarFactoryStatic"
+    factory-method="getCar">
+    <constructor-arg value="changcheng"/>
+  </bean>
+
+</beans>

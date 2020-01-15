@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-boot2-aop
+
+# server
+server:
+  port: 8006
+

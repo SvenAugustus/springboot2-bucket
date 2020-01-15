@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2018-2025 the original author or authors.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.github.flysium-io</groupId>
+  <artifactId>springboot-2-bucket-pom</artifactId>
+  <version>1.0.0-SNAPSHOT</version><!--<version>1.0.0-SNAPSHOT</version>-->
+  <packaging>pom</packaging>
+  <name>SpringBoo2 bucket POM</name>
+  <description>Parent pom of Spring Boot2 Bucket.</description>
+  <url>https://github.com/SvenAugustus/springboot2-bucket</url>
+  <inceptionYear>2019</inceptionYear>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <tag>master</tag><!-- <tag>v${project.version}</tag> -->
+    <url>git@github.com:SvenAugustus/springboot2-bucket.git</url>
+    <connection>scm:git@github.com:SvenAugustus/springboot2-bucket.git</connection>
+    <developerConnection>scm:git@github.com:SvenAugustus/springboot2-bucket.git
+    </developerConnection>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/SvenAugustus/springboot2-bucket/issues</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <name>SvenAugustus</name>
+      <email>svenaugustus@outlook.com</email>
+      <organization>Flysium-IO</organization>
+      <timezone>+8</timezone>
+    </developer>
+  </developers>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <spring-boot.version>2.1.15.RELEASE</spring-boot.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- Import dependency management from Spring Boot -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <modules>
+    <!-- spring -->
+    <module>basic/spring</module>
+    <!-- springboot -->
+    <module>core/springboot-actuator</module>
+    <module>core/springboot-aop</module>
+    <module>core/springboot-async</module>
+    <module>core/springboot-feat-logging</module>
+    <module>core/springboot-feat-i18n</module>
+    <!-- config, profile -->
+    <module>core/springboot-feat-banner</module>
+    <module>core/springboot-feat-application-events</module>
+    <module>core/springboot-feat-externalized-inner</module>
+    <module>core/springboot-feat-externalized-configuration</module>
+    <module>core/springboot-feat-profile</module>
+    <!-- web -->
+    <module>mvc/springboot-feat-mvc</module>
+    <module>mvc/springboot-error-page</module>
+    <!-- jaxrs jaxws -->
+    <module>jax/springboot-feat-jaxrs-cxf</module>
+    <module>jax/springboot-feat-jaxrs-jersey</module>
+    <module>jax/springboot-feat-jaxws-cxf</module>
+    <!-- sql -->
+    <module>sql-database/springboot-database-embedded</module>
+    <module>sql-database/springboot-jdbc-jndi</module>
+    <module>sql-database/springboot-jpa-simple</module>
+    <module>sql-database/springboot-mybatis</module>
+    <module>sql-database/springboot-mybatis-generator</module>
+    <module>sql-database/springboot-mybatis-plus</module>
+    <module>sql-database/springboot-mybatis-plus-generator</module>
+    <!-- nosql -->
+    <module>nosql-data/springboot-cache</module>
+    <module>nosql-data/springboot-redis</module>
+    <module>nosql-data/springboot-mongodb</module>
+    <!-- messaging -->
+    <module>messaging/springboot-feat-messaging-activemq</module>
+    <module>messaging/springboot-feat-messaging-artemis</module>
+    <module>messaging/springboot-feat-messaging-rocketmq</module>
+    <module>messaging/springboot-feat-messaging-rocketmq-integration</module>
+    <module>messaging/springboot-feat-messaging-rabbitmq</module>
+    <module>messaging/springboot-feat-messaging-kafka</module>
+
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.3</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+        <!-- Package as an executable jar -->
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.2</version>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

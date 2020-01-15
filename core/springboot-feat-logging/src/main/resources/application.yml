@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-boot2-logging
+
+# server
+server:
+  port: 8260
+
+# logging
+logging:
+  level:
+    root: info
+    com.github.flysium.io: debug
+  path: /opt/cache/webserver-logs
+  config: classpath:logback-spring.xml
+

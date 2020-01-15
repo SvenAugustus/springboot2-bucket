@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: root
+    password: root123
+    driverClassName: com.mysql.jdbc.Driver  #配置JDBC Driver
+    ## 数据初始化设置, Spring Boot 会自动读取 classpath:schema-${platform}.sql 以及 data-${platform}.sql
+    platform: mysql  #表明使用的数据库平台是 mysql
+
+logging:
+  level:
+    com:
+      github:
+        flysium:
+          io:
+            example:
+              mapper: DEBUG
+
+# server
+server:
+  port: 9090
+
+mybatis:
+  type-aliases-package: com.github.flysium.io.example.model
+#  mapper-locations: classpath:com/github/flysium/io/example/mapper/*.xml
+

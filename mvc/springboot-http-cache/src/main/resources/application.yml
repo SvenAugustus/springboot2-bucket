@@ -1,0 +1,10 @@
+spring:
+  resources:
+    cache:
+      # 针对 /webjars/** ("classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/")
+      #  和 spring.mvc.static-path-pattern (默认/**)  加入 cache-control 缓存配置
+      # org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration#addResourceHandlers
+      cachecontrol:
+        max-age: 604800
+        cache-private: true
+

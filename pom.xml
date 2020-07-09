@@ -94,6 +94,7 @@
     <module>mvc/springboot-feat-mvc</module>
     <module>mvc/springboot-error-page</module>
     <module>mvc/springboot-swagger</module>
+    <module>mvc/springboot-http-cache</module>
     <!-- jaxrs jaxws -->
     <module>jax/springboot-feat-jaxrs-cxf</module>
     <module>jax/springboot-feat-jaxrs-jersey</module>

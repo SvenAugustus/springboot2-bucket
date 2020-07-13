@@ -23,6 +23,7 @@
     <groupId>com.github.flysium-io</groupId>
     <artifactId>springboot-2-bucket-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../../</relativePath>
   </parent>
 
   <artifactId>springboot-feat-profile</artifactId>

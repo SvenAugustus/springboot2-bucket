@@ -1,5 +1,5 @@
 # Spring Boot 2 Bucket
-[![Build Status](https://travis-ci.org/flysium-io/yew.svg?branch=master)](https://travis-ci.org/SvenAugustus/springboot2-bucket) [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Build Status](https://api.travis-ci.org/SvenAugustus/springboot2-bucket.svg?branch=master)](https://travis-ci.org/SvenAugustus/springboot2-bucket) [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 #### Description
 The bucket of [Spring boot 2](https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle) demos, which is based on [Spring Framework 5](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/).

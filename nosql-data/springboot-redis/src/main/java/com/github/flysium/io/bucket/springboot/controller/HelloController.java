@@ -16,7 +16,7 @@
 
 package com.github.flysium.io.bucket.springboot.controller;
 
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.data.redis.core.BoundValueOperations;

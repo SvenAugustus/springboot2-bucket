@@ -17,7 +17,7 @@
 package sample.ws.client;
 
 import com.github.flysium.io.bucket.springboot.api.HelloService;
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;

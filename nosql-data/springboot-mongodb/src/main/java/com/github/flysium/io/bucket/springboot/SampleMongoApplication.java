@@ -16,8 +16,8 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.domain.UserInfo;
-import com.github.flysium.io.bucket.springboot.service.UserRepository;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
+import com.github.flysium.io.bucket.springboot.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.MongoTemplate;

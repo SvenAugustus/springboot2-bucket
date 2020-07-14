@@ -1,9 +1,9 @@
 package com.github.flysium.io.springboot;
 
-import com.github.flysium.io.springboot.mapper.AccountMapper;
-import com.github.flysium.io.springboot.mapper.CityMapper;
-import com.github.flysium.io.springboot.model.Account;
-import com.github.flysium.io.springboot.model.City;
+import com.github.flysium.io.springboot.entity.Account;
+import com.github.flysium.io.springboot.entity.City;
+import com.github.flysium.io.springboot.repository.AccountMapper;
+import com.github.flysium.io.springboot.repository.CityMapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Bean;
  * @version 1.0
  */
 @SpringBootApplication
-@MapperScan("com.github.flysium.io.springboot.mapper")
+@MapperScan("com.github.flysium.io.springboot.repository")
 public class SampleMybatisApplication {
 
   public static void main(String[] args) {

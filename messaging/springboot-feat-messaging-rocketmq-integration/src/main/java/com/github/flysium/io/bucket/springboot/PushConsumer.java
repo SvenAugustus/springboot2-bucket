@@ -16,8 +16,8 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.domain.OrderInfo;
-import com.github.flysium.io.bucket.springboot.domain.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.OrderInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;

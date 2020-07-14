@@ -17,7 +17,7 @@
 package com.github.flysium.io.bucket.springboot.controller;
 
 import com.github.flysium.io.bucket.springboot.Producer;
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.time.LocalDateTime;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

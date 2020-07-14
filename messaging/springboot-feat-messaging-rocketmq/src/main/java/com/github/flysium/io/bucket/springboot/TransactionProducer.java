@@ -16,9 +16,9 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.domain.OrderInfo;
+import com.github.flysium.io.bucket.springboot.entity.OrderInfo;
+import com.github.flysium.io.bucket.springboot.repository.IOrderService;
 import com.github.flysium.io.bucket.springboot.rocketmq.RocketMQMessageConverter;
-import com.github.flysium.io.bucket.springboot.service.IOrderService;
 import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

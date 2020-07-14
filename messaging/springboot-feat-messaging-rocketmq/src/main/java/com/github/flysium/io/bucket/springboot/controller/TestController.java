@@ -18,8 +18,8 @@ package com.github.flysium.io.bucket.springboot.controller;
 
 import com.github.flysium.io.bucket.springboot.Producer;
 import com.github.flysium.io.bucket.springboot.TransactionProducer;
-import com.github.flysium.io.bucket.springboot.domain.OrderInfo;
-import com.github.flysium.io.bucket.springboot.domain.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.OrderInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -16,7 +16,7 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import com.rabbitmq.client.Channel;
 import java.io.IOException;
 import org.springframework.amqp.core.Message;

@@ -16,7 +16,7 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.util.List;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;

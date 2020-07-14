@@ -1,6 +1,6 @@
 package com.github.flysium.io.bucket.springboot.controller;
 
-import com.github.flysium.io.bucket.springboot.model.User;
+import com.github.flysium.io.bucket.springboot.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;

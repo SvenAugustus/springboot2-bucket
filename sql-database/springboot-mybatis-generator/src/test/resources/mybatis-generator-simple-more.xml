@@ -56,7 +56,7 @@
     </javaTypeResolver>
 
     <!--生成Model类存放位置-->
-    <javaModelGenerator targetPackage="com.github.flysium.io.example.model"
+    <javaModelGenerator targetPackage="com.github.flysium.io.example.entity"
       targetProject="src/main/java">
       <!--      <property name="enableSubPackages" value="false"/>-->
       <!--      <property name="trimStrings" value="true"/>-->
@@ -67,7 +67,8 @@
          targetProject="src/main/resources"/>
    -->
     <!--生成Mapper类存放位置-->
-    <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="com.github.flysium.io.example.mapper"
+    <javaClientGenerator type="ANNOTATEDMAPPER"
+      targetPackage="com.github.flysium.io.example.repository"
       targetProject="src/main/java">
       <!--   <property name="enableSubPackages" value="false"/>  -->
     </javaClientGenerator>
@@ -83,7 +84,7 @@
       enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
       enableSelectByExample="false" selectByExampleQueryId="false">
       <!-- http://mybatis.org/generator/configreference/generatedKey.html -->
-      <generatedKey column="empno" sqlStatement="Mysql" identity="true"/>
+      <generatedKey column="deptno" sqlStatement="Mysql" identity="true"/>
     </table>
 
   </context>

@@ -17,7 +17,7 @@
 package com.github.flysium.io.bucket.springboot.controller;
 
 import com.github.flysium.io.bucket.springboot.DemoProducer;
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.concurrent.ExecutionException;

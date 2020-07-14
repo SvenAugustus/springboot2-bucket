@@ -16,7 +16,7 @@
 
 package com.github.flysium.io.bucket.springboot.api;
 
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;

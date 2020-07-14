@@ -16,7 +16,7 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import org.springframework.context.annotation.Profile;

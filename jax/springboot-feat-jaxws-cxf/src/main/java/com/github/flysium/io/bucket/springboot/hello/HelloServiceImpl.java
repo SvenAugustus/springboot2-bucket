@@ -17,7 +17,7 @@
 package com.github.flysium.io.bucket.springboot.hello;
 
 import com.github.flysium.io.bucket.springboot.api.HelloService;
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import javax.jws.WebService;
 
 /**

@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    schema: classpath:db/schema.sql
+    schema: classpath:schema-h2.sql
     url: jdbc:h2:mem:test
     username: root
     password: test
@@ -13,13 +13,13 @@ logging:
         flysium:
           io:
             springboot:
-              mapper: DEBUG
+              repository: DEBUG
 
 # server
 server:
   port: 9090
 
 mybatis:
-  type-aliases-package: com.github.flysium.io.springboot.model
+  type-aliases-package: com.github.flysium.io.springboot.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
 

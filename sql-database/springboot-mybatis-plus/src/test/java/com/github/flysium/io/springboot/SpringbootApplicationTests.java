@@ -1,7 +1,7 @@
 package com.github.flysium.io.springboot;
 
-import com.github.flysium.io.springboot.mapper.UserMapper;
-import com.github.flysium.io.springboot.model.User;
+import com.github.flysium.io.springboot.entity.User;
+import com.github.flysium.io.springboot.repository.UserMapper;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;

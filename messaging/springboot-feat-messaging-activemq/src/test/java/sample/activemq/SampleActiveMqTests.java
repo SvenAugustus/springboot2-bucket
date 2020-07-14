@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import com.github.flysium.io.bucket.springboot.QueueProducer;
 import com.github.flysium.io.bucket.springboot.TopicProducer;
-import com.github.flysium.io.bucket.springboot.model.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import org.junit.Rule;

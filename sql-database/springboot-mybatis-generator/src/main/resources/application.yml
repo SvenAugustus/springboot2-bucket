@@ -14,13 +14,12 @@ logging:
         flysium:
           io:
             example:
-              mapper: DEBUG
+              repository: DEBUG
 
 # server
 server:
   port: 9090
 
 mybatis:
-  type-aliases-package: com.github.flysium.io.example.model
-#  mapper-locations: classpath:com/github/flysium/io/example/mapper/*.xml
+  type-aliases-package: com.github.flysium.io.example.entity
 

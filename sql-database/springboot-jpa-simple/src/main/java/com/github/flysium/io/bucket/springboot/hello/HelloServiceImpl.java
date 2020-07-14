@@ -17,8 +17,8 @@
 package com.github.flysium.io.bucket.springboot.hello;
 
 import com.github.flysium.io.bucket.springboot.api.HelloService;
-import com.github.flysium.io.bucket.springboot.jpa.domain.UserInfo;
-import com.github.flysium.io.bucket.springboot.jpa.service.UserRepository;
+import com.github.flysium.io.bucket.springboot.jpa.entity.UserInfo;
+import com.github.flysium.io.bucket.springboot.jpa.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 /**

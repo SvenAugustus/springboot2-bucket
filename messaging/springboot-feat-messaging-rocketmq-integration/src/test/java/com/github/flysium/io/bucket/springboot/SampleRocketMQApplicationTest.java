@@ -16,8 +16,8 @@
 
 package com.github.flysium.io.bucket.springboot;
 
-import com.github.flysium.io.bucket.springboot.domain.OrderInfo;
-import com.github.flysium.io.bucket.springboot.domain.UserInfo;
+import com.github.flysium.io.bucket.springboot.entity.OrderInfo;
+import com.github.flysium.io.bucket.springboot.entity.UserInfo;
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.atomic.AtomicLong;
@@ -117,7 +117,7 @@ public class SampleRocketMQApplicationTest {
     this.transactionProducer.sendMessageInTransaction("msg-13", new OrderInfo(now3, 3, "msg-13"));
     Thread.sleep(15000L);
     /**
-     * @see com.github.flysium.io.bucket.springboot.service.OrderServiceImpl
+     * @see com.github.flysium.io.bucket.springboot.repository.OrderServiceImpl
      * 这里模拟一下这些数据
      */
     Assertions.assertThat(this.outputCapture.toString().contains("keys=msg-11")).isTrue();

@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0
  */
 @SpringBootApplication
-@MapperScan("com.github.flysium.io.springboot.mapper")
+@MapperScan("com.github.flysium.io.springboot.repository")
 public class SampleMybatisPlusApplication {
 
   public static void main(String[] args) {

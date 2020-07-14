@@ -1,8 +1,8 @@
 package com.github.flysium.io.example.service;
 
-import com.github.flysium.io.example.mapper.EmpMapper;
-import com.github.flysium.io.example.model.Emp;
-import com.github.flysium.io.example.model.EmpExample;
+import com.github.flysium.io.example.entity.Emp;
+import com.github.flysium.io.example.entity.EmpExample;
+import com.github.flysium.io.example.repository.EmpMapper;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

@@ -14,7 +14,7 @@ logging:
         flysium:
           io:
             springboot:
-              mapper: DEBUG
+              repository: DEBUG
 
 # server
 server:

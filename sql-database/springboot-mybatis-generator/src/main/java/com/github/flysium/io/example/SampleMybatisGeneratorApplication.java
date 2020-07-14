@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
  * @version 1.0
  */
 @SpringBootApplication
-@MapperScan("com.github.flysium.io.example.mapper")
+@MapperScan("com.github.flysium.io.example.repository")
 public class SampleMybatisGeneratorApplication {
 
   public static void main(String[] args) {

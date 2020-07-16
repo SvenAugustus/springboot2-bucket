@@ -4,8 +4,9 @@ package com.github.flysium.io.springboot.entity;
  * @author Sven Augustus
  * @version 1.0
  */
-public class Account {
+public class Account implements java.io.Serializable {
 
+  private static final long serialVersionUID = -8524181344925220573L;
   private int id;
   private String loginName;
   private String password;

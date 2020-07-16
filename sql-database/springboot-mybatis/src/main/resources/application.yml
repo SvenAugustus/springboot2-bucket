@@ -22,4 +22,8 @@ server:
 mybatis:
   type-aliases-package: com.github.flysium.io.springboot.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    # 控制二级缓存的总开关, 默认 true, 如果启用 Executor 会被代理为 CachingExecutor
+    # see org.apache.ibatis.session.Configuration#newExecutor
+    cache-enabled: true
 

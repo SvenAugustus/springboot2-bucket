@@ -16,20 +16,20 @@
 
 package com.github.flysium.io.springboot.repository;
 
-import com.github.flysium.io.springboot.entity.Account;
-import java.util.List;
+import com.github.flysium.io.springboot.entity.Role;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
- * @author SvenAugustus
+ * User Mapper
+ *
+ * @author Sven Augustus
+ * @version 1.0
  */
 @Mapper
-//@CacheNamespace(flushInterval = 0) // 启用二级缓存, org.apache.ibatis.mapping.MappedStatement#
-public interface AccountMapper {
+public interface RoleMapper {
 
-  //  @Flush // 禁用一级缓存
-//  @Options(useCache = true)
-  List<Account> findAll();
+  @Select("SELECT * from role WHERE id = #{id}")
+  Role findById(long id);
 
-  void add(Account account);
 }

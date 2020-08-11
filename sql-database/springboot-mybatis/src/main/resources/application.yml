@@ -3,8 +3,8 @@ spring:
     driver-class-name: org.h2.Driver
     schema: classpath:schema-h2.sql
     url: jdbc:h2:mem:test
-    username: root
-    password: test
+    username: sa
+    password: sa
 
 logging:
   level:
@@ -23,6 +23,9 @@ mybatis:
   type-aliases-package: com.github.flysium.io.springboot.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:
+    # Mybatis仅支持association关联对象和collection关联集合对象的延迟加载，association指的就是一对一，collection指的就是一对多查询。
+    lazy-loading-enabled: true
+    aggressive-lazy-loading: true
     # 控制二级缓存的总开关, 默认 true, 如果启用 Executor 会被代理为 CachingExecutor
     # see org.apache.ibatis.session.Configuration#newExecutor
     cache-enabled: true

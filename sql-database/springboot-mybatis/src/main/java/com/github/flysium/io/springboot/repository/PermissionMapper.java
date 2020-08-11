@@ -16,20 +16,21 @@
 
 package com.github.flysium.io.springboot.repository;
 
-import com.github.flysium.io.springboot.entity.Account;
+import com.github.flysium.io.springboot.entity.Permission;
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
- * @author SvenAugustus
+ * User Mapper
+ *
+ * @author Sven Augustus
+ * @version 1.0
  */
 @Mapper
-//@CacheNamespace(flushInterval = 0) // 启用二级缓存, org.apache.ibatis.mapping.MappedStatement#
-public interface AccountMapper {
+public interface PermissionMapper {
 
-  //  @Flush // 禁用一级缓存
-//  @Options(useCache = true)
-  List<Account> findAll();
+  @Select("SELECT * from permission WHERE uid = #{id}")
+  List<Permission> findListByUserId(long uid);
 
-  void add(Account account);
 }

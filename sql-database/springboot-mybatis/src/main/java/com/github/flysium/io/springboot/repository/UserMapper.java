@@ -16,20 +16,26 @@
 
 package com.github.flysium.io.springboot.repository;
 
-import com.github.flysium.io.springboot.entity.Account;
-import java.util.List;
+import com.github.flysium.io.springboot.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author SvenAugustus
+ * User Mapper
+ *
+ * @author Sven Augustus
+ * @version 1.0
  */
 @Mapper
-//@CacheNamespace(flushInterval = 0) // 启用二级缓存, org.apache.ibatis.mapping.MappedStatement#
-public interface AccountMapper {
+public interface UserMapper {
 
-  //  @Flush // 禁用一级缓存
-//  @Options(useCache = true)
-  List<Account> findAll();
+  User findById11(long id);
 
-  void add(Account account);
+  User findById12(long id);
+
+  User findById13(long id);
+
+  User findById21(long id);
+
+  User findById22(long id);
+
 }

@@ -14,22 +14,39 @@
  * limitations under the License.
  */
 
-package com.github.flysium.io.springboot.repository;
-
-import com.github.flysium.io.springboot.entity.Account;
-import java.util.List;
-import org.apache.ibatis.annotations.Mapper;
+package com.github.flysium.io.springboot.entity;
 
 /**
- * @author SvenAugustus
+ * @author Sven Augustus
+ * @version 1.0
  */
-@Mapper
-//@CacheNamespace(flushInterval = 0) // 启用二级缓存, org.apache.ibatis.mapping.MappedStatement#
-public interface AccountMapper {
+public class Role {
 
-  //  @Flush // 禁用一级缓存
-//  @Options(useCache = true)
-  List<Account> findAll();
+  private Long id;
+  private String name;
 
-  void add(Account account);
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    final StringBuffer sb = new StringBuffer("Role{");
+    sb.append("id=").append(id);
+    sb.append(", name='").append(name).append('\'');
+    sb.append('}');
+    return sb.toString();
+  }
 }

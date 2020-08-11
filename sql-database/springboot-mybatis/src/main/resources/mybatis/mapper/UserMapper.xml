@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2020 SvenAugustus
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace 对应到 接口上 就不需要实例化了 -->
+<mapper namespace="com.github.flysium.io.springboot.repository.UserMapper">
+
+  <!-- 一对一关联 方式一 关联查询 begin -->
+  <select id="findById11" resultType="com.github.flysium.io.springboot.entity.User">
+    select u.id,
+           u.name,
+           r.id   as "role.id",
+           r.name as "role.name"
+    from user u
+           left join role r on u.role_id = r.id
+    where u.id = #{id}
+  </select>
+  <!-- 一对一关联 方式一 end -->
+
+  <!-- 一对一关联 方式二 关联查询 begin -->
+  <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
+  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap12">
+    <!-- column 表里的字段 -->
+    <!-- property 实体对象里的属性 -->
+    <id column="id" property="id" javaType="long"/>
+    <result column="name" property="name"/>
+    <association columnPrefix="role_" property="role"
+      javaType="com.github.flysium.io.springboot.entity.Role">
+      <id column="id" property="id" javaType="long"/>
+      <result column="name" property="name"/>
+    </association>
+  </resultMap>
+
+  <select id="findById12" resultMap="BaseResultMap12">
+    select u.id,
+           u.name,
+           r.id   as role_id,
+           r.name as role_name
+    from user u
+           left join role r on u.role_id = r.id
+    where u.id = #{id}
+  </select>
+  <!-- 一对一关联 方式二 end -->
+
+
+  <!-- 一对一关联 方式三 嵌套查询 begin -->
+  <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
+  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap13">
+    <!-- column 表里的字段 -->
+    <!-- property 实体对象里的属性 -->
+    <id column="id" property="id" javaType="long"/>
+    <result column="name" property="name"/>
+    <association column="role_id" foreignColumn="id" property="role"
+      select="com.github.flysium.io.springboot.repository.RoleMapper.findById"/>
+  </resultMap>
+
+  <select id="findById13" resultMap="BaseResultMap13">
+    select u.id, u.name, u.role_id
+    from user u
+    where u.id = #{id}
+  </select>
+  <!-- 一对一关联 方式三 end -->
+
+  <!-- 一对多关联 方式一 关联查询 begin -->
+  <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
+  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap21">
+    <!-- column 表里的字段 -->
+    <!-- property 实体对象里的属性 -->
+    <id column="id" property="id" javaType="long"/>
+    <result column="name" property="name"/>
+    <!-- 一对一 private Role role; -->
+    <association columnPrefix="role_" property="role"
+      javaType="com.github.flysium.io.springboot.entity.Role">
+      <id column="id" property="id" javaType="long"/>
+      <result column="name" property="name"/>
+    </association>
+    <!-- 一对多 private List<Permission> permissionList; -->
+    <!--
+      collection定义关联结合类型的属性的封装规则
+      ofType：指定集合里面元素的类型
+      -->
+    <collection columnPrefix="permission_" property="permissionList"
+      ofType="com.github.flysium.io.springboot.entity.Permission">
+      <id column="id" property="id" javaType="long"/>
+      <result column="name" property="name"/>
+      <result column="uid" property="uid"/>
+    </collection>
+  </resultMap>
+
+  <select id="findById21" resultMap="BaseResultMap21">
+    select u.id,
+           u.name,
+           r.id   as role_id,
+           r.name as role_name,
+           p.id   as permission_id,
+           p.name as permission_name,
+           p.uid  as permission_uid
+    from user u
+           left join role r on u.role_id = r.id
+           left join permission p on p.uid = u.id
+    where u.id = #{id}
+  </select>
+  <!-- 一对多关联 方式一 end -->
+
+  <!-- 一对多关联 方式二 嵌套查询 begin -->
+  <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
+  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap22">
+    <!-- column 表里的字段 -->
+    <!-- property 实体对象里的属性 -->
+    <id column="id" property="id" javaType="long"/>
+    <result column="name" property="name"/>
+    <!-- 一对一 private Role role; -->
+    <association column="role_id" foreignColumn="id" property="role"
+      select="com.github.flysium.io.springboot.repository.RoleMapper.findById"/>
+    <!-- 一对多 private List<Permission> permissionList; -->
+    <collection column="id" foreignColumn="uid" property="permissionList"
+      select="com.github.flysium.io.springboot.repository.PermissionMapper.findListByUserId"/>
+  </resultMap>
+
+  <select id="findById22" resultMap="BaseResultMap22">
+    select u.id,
+           u.name,
+           u.role_id
+    from user u
+    where u.id = #{id}
+  </select>
+  <!-- 一对多关联 方式二 end -->
+
+</mapper>

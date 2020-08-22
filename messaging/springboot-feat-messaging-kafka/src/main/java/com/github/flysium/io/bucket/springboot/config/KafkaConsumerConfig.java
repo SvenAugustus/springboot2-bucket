@@ -1,11 +1,11 @@
 /*
- * Copyright 2018-2025 the original author or authors.
+ * Copyright 2020 SvenAugustus
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,6 +27,7 @@ import org.springframework.kafka.listener.ContainerProperties;
 import org.springframework.kafka.listener.DeadLetterPublishingRecoverer;
 import org.springframework.kafka.listener.SeekToCurrentBatchErrorHandler;
 import org.springframework.kafka.listener.SeekToCurrentErrorHandler;
+import org.springframework.util.backoff.FixedBackOff;
 
 /**
  * Kafka Configuration.
@@ -54,7 +55,7 @@ public class KafkaConsumerConfig {
     //    消息就会被丢掉重试死信队列里面去。死信队列的Topic的规则是，业务Topic名字+“.DLT”。
     factory
         .setErrorHandler(new SeekToCurrentErrorHandler(new DeadLetterPublishingRecoverer(template),
-            1));
+            new FixedBackOff(5000, 1)));
     // TODO 开启批量消费监听器
     factory.setBatchListener(true);
     factory.setBatchErrorHandler(new SeekToCurrentBatchErrorHandler());

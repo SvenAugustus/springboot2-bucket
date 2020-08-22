@@ -49,7 +49,7 @@ Spring Boot包含以下预定义的日志记录组，可以直接使用：
 |   JDK (`Java Util Logging`)  |  `logging.properties`                                                  |        
 
 ## Logback 扩展
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-logback-extensions
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-logback-extensions
 
 ### 特定于配置文件的配置
 `<springProfile>` 标签允许您根据活动的Spring配置文件选择性地包含或排除配置部分。 在`<configuration>`元素中的任何位置都支持配置`<springProfile>`节点。 
@@ -85,6 +85,6 @@ https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boo
 
 
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-logging
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-logging
 
 

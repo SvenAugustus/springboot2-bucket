@@ -22,7 +22,7 @@ org.springframework.context.ApplicationListener=\
 你可能经常不需要使用应用程序事件，但知道它们存在可能很方便。在内部，Spring Boot使用事件来处理各种任务。  
 
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-application-events-and-listeners
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-application-events-and-listeners
 
 
 

@@ -24,5 +24,5 @@ Spring Boot 如果出现错误，比如：401、403、404、500等，均是有 `
   - 若`server.error.whitelabel.enabled=false`将不会有任何信息。  
 
 ## 参考
-Spring Boot [Error Handling](https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-error-handling)
+Spring Boot [Error Handling](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-error-handling)
 

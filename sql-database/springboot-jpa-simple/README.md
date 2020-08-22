@@ -1,8 +1,8 @@
 # JPA and Spring Data JPA Simple Sample
 -  https://spring.io/guides/gs/accessing-data-jpa/
 -  https://projects.spring.io/spring-data-jpa/
--  https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data
-- https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#howto-database-initialization
+-  https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data
+- https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#howto-database-initialization
 
 ### What is Java Persistence API (JPA) ?
 As a specification, the Java Persistence API is concerned with persistence, which loosely means any mechanism by which Java objects outlive the application process that created them. Not all Java objects need to be persisted, but most applications persist key business objects. The JPA specification lets you define which objects should be persisted, and how those objects should be persisted in your Java applications.

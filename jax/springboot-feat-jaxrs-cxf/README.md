@@ -1,5 +1,5 @@
 # JAX-RS Using CXF
-- https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-jersey
+- https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-jersey
 -  http://cxf.apache.org/docs/springboot.html
 -  https://github.com/apache/cxf/tree/master/distribution/src/main/release/samples
 

@@ -31,4 +31,4 @@ spring.profiles.include:
 以上，当 切换为`--spring.profiles.active=prod`，  `proddb` 与 `prodmq` 对应的 `Spring Profiles` 也会被激活生效。
 
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-profiles
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-profiles

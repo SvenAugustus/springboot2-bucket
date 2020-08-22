@@ -1,5 +1,5 @@
 # Jdbc and JNDI Datasource
--  https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-connect-to-production-database
+-  https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-connect-to-production-database
 
 ### Connection to a Production Database
 Production database connections can also be auto-configured by using a pooling `DataSource`. Spring Boot uses the following algorithm for choosing a specific implementation:

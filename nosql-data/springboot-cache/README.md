@@ -1,5 +1,5 @@
 ### Spring Boot Cache Sample
-- https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-caching
+- https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-caching
 - https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache
 
 This sample demonstrates the caching auto-configuration support. Spring's caching

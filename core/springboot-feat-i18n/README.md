@@ -58,6 +58,6 @@ System.out.println(this.messageSource.getMessage("hello", null, Locale.CHINA));/
 ```
 
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-internationalization
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-internationalization
 
 

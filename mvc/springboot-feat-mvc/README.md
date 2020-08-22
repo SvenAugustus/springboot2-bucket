@@ -16,7 +16,7 @@ Spring MVC支持各种模板技术，包括Thymeleaf，FreeMarker和JSP。 此�
 ```
 
 #### 使用`JSPs`已知问题
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-jsp-limitations
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-jsp-limitations
 
 When running a Spring Boot application that uses an embedded servlet container (and is packaged as an executable archive), there are some limitations in the JSP support.
 
@@ -24,10 +24,10 @@ When running a Spring Boot application that uses an embedded servlet container (
 
 - `Undertow` does not support `JSPs`.
 
-- Creating a custom `error.jsp` page does not override the default view for [error handling](https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-error-handling). [Custom error pages](https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-error-handling-custom-error-pages) should be used instead.
+- Creating a custom `error.jsp` page does not override the default view for [error handling](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-error-handling). [Custom error pages](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-error-handling-custom-error-pages) should be used instead.
 
 There is a [JSP sample](https://github.com/spring-projects/spring-boot/tree/v2.1.6.RELEASE/spring-boot-samples/spring-boot-sample-web-jsp) so that you can see how to set things up.
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-spring-mvc
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-spring-mvc
 
 

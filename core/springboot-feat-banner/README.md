@@ -4,7 +4,7 @@
 Banner 指的是 Spring Boot 启动时打印的字符画，默认是 Spring Boot。  
 
 ## 自定义 Banner
-[Customizing the Banner](https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-banner)
+[Customizing the Banner](https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-banner)
 
 ### Banner 参数
 - `${application.version}`  
@@ -33,4 +33,4 @@ The title of your application, as declared in `MANIFEST.MF`. For exampleImplemen
 
 
 ## 参考
-https://docs.spring.io/spring-boot/docs/2.1.15.RELEASE/reference/htmlsingle/#boot-features-banner
+https://docs.spring.io/spring-boot/docs/2.3.3.RELEASE/reference/htmlsingle/#boot-features-banner

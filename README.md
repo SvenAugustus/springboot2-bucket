@@ -11,7 +11,7 @@ The bucket of [Spring boot 2](https://docs.spring.io/spring-boot/docs/2.3.3.RELE
 * 3、Spring Boot 2.3.x
 
 #### Contract
-* Email: SvenAugustus@outlook.com (Or zeno531@yeah.net)
+* Email: SvenAugustus@outlook.com (Or zeno531@outlook.com)
 * GitHub: https://github.com/SvenAugustus
 * GitLab: https://gitlab.com/SvenAugustus
 

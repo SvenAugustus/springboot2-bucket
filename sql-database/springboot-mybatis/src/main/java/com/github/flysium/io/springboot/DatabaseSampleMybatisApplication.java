@@ -40,10 +40,10 @@ import org.springframework.util.CollectionUtils;
  */
 @SpringBootApplication
 @MapperScan("com.github.flysium.io.springboot.repository")
-public class SampleMybatisApplication {
+public class DatabaseSampleMybatisApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(SampleMybatisApplication.class, args);
+    SpringApplication.run(DatabaseSampleMybatisApplication.class, args);
   }
 
   private final CityMapper cityMapper;
@@ -51,7 +51,7 @@ public class SampleMybatisApplication {
   private final UserMapper userMapper;
   private final Environment environment;
 
-  public SampleMybatisApplication(
+  public DatabaseSampleMybatisApplication(
       CityMapper cityMapper,
       AccountMapper accountMapper,
       UserMapper userMapper, Environment environment) {

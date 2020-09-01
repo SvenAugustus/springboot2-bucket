@@ -26,7 +26,7 @@ import org.springframework.boot.test.system.OutputCaptureRule;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * Tests for {@link SampleMongoApplication}.
+ * Tests for {@link MongoSampleApplication}.
  *
  * @author Sven Augustus
  */

@@ -13,7 +13,7 @@ spring:
     password: mq123
     packages:
       trust-all: false # reason: java.lang.ClassNotFoundException: Forbidden class sample.activemq.model.UserInfo! This class is not trusted to be serialized as ObjectMessage payload.
-      trusted: com.github.flysium.io.bucket.springboot.model
+      trusted: xyz.flysium.dao.entity
     in-memory: false # 如果需要持久化消息，请关闭 in-memory
     #    pool:
     #      enabled: true

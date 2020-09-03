@@ -14,4 +14,4 @@ cxf:
     client:
       address: http://localhost:8293/services/helloservice
       headers.accept: text/plain
-      classes-scan-packages: com.github.flysium.io.bucket.springboot.api
+      classes-scan-packages: xyz.flysium.api

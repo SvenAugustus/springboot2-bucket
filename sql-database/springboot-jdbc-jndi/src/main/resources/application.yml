@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: production
+    active: jdbc
   application:
     name: spring-boot2-sql-database-jdbc-jndi
 
@@ -15,14 +15,14 @@ logging:
 
 ---
 spring:
-  profiles: production
+  profiles: jndi
 
   datasource:
     jndi-name: java:comp/env/jdbc/myDataSource # java:jboss/datasources/myDataSource
 
 ---
 spring:
-  profiles: development
+  profiles: jdbc
 
   datasource:
     ## 数据库连接设置

@@ -20,7 +20,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.github.flysium-io</groupId>
+    <groupId>xyz.flysium.springboot</groupId>
     <artifactId>springboot-2-bucket-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../../</relativePath>
@@ -95,9 +95,9 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <configuration>
-          <mainClass>com.github.flysium.io.bucket.springboot.WebSampleSwaggerApplication</mainClass>
-        </configuration>
+        <!-- <configuration>
+           <mainClass>xyz.flysium.WebSampleSwaggerApplication</mainClass>
+         </configuration>-->
         <executions>
           <execution>
             <goals>

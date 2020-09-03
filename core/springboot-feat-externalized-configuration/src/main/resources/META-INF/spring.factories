@@ -1,3 +1,3 @@
 org.springframework.context.ApplicationListener=\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationReadyEventListener
+    xyz.flysium.listeners.ApplicationReadyEventListener
 

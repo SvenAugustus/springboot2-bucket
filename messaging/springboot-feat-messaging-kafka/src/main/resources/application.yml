@@ -20,7 +20,7 @@ spring:
       # transaction-id-prefix: trans-
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-      #      value-serializer: com.github.flysium.io.bucket.springboot.support.serializer.KryoSerializer
+      #      value-serializer: xyz.flysium.support.serializer.KryoSerializer
       # acks 参数指定了必须要有多少个分区副本收到消息，生产者才会认为消息写入是成功的。默认 acks=1
       # acks=0 把消息发送到 kafka就认为发送成功
       # acks=1 把消息发送到 kafka leader分区，并且写入磁盘就认为发送成功
@@ -74,7 +74,7 @@ spring:
       # bootstrap-servers:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      #      value-deserializer: com.github.flysium.io.bucket.springboot.support.serializer.KryoDeserializer
+      #      value-deserializer: xyz.flysium.support.serializer.KryoDeserializer
       # 消费者从服务器获取记录的最小字节数, 默认为 `1` , spring boot 的 fetch-min-size 对应 kafka 消费者配置的 fetch.min.bytes
       fetch-min-size: 1
       # 指定 broker 的等待时间，默认是 500ms
@@ -102,7 +102,7 @@ spring:
       auto-offset-reset: latest
       properties:
         # for value-deserializer: JsonDeserializer
-        spring.json.trusted.packages: com.github.flysium.io.bucket.springboot.model
+        spring.json.trusted.packages: xyz.flysium.dao.entity
         # 决定哪些分区应该被分配给哪个消费者
         # org.apache.kafka.clients.consumer.RangeAssignor 该策略会把主题的若干个连续的分区分配给消费者。
         #         假设消费者 C1 和消费者 C2 同时订阅了主题 T1 和主题 T2，并且每个主题有 3 个分区。

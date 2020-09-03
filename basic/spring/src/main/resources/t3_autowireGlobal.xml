@@ -5,9 +5,9 @@
   default-autowire="byType"
 >  <!-- 全局自动注入 -->
 
-  <bean id="personAutowireByName" class="xyz.flysium.spring.samples.Person2">
+  <bean id="personAutowireByName" class="xyz.flysium.Person2">
   </bean>
-  <bean id="pet" class="xyz.flysium.spring.samples.Pet">
+  <bean id="pet" class="xyz.flysium.Pet">
     <property name="name" value="kele"/>
   </bean>
 

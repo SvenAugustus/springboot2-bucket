@@ -19,7 +19,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.github.flysium-io</groupId>
+  <groupId>xyz.flysium.springboot</groupId>
   <artifactId>springboot-2-bucket-pom</artifactId>
   <version>1.0.0-SNAPSHOT</version><!--<version>1.0.0-SNAPSHOT</version>-->
   <packaging>pom</packaging>
@@ -29,7 +29,7 @@
   <inceptionYear>2019</inceptionYear>
   <licenses>
     <license>
-      <name>The MIT License</name>
+      <name>The Apache License V2</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
@@ -95,6 +95,8 @@
     <module>mvc/springboot-error-page</module>
     <module>mvc/springboot-swagger</module>
     <module>mvc/springboot-http-cache</module>
+    <!-- webflux -->
+    <module>webflux/springboot-sample-webflux</module>
     <!-- jaxrs jaxws -->
     <module>jax/springboot-feat-jaxrs-cxf</module>
     <module>jax/springboot-feat-jaxrs-jersey</module>

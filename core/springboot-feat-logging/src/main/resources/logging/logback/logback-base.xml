@@ -68,7 +68,7 @@
 
   <!-- logger  -->
   <!--Business Log: Please replace logger name with yours or add a new one!-->
-  <logger name="com.github.flysium.io" level="${BUSINESS_LEVEL:-${BASE_BUSINESS_LEVEL}}"
+  <logger name="xyz.flysium" level="${BUSINESS_LEVEL:-${BASE_BUSINESS_LEVEL}}"
     additivity="false">
     <appender-ref ref="APP_LOG"/>
     <appender-ref ref="CONSOLE"/>

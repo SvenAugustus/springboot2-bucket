@@ -19,10 +19,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace 对应到 接口上 就不需要实例化了 -->
-<mapper namespace="com.github.flysium.io.springboot.repository.AccountMapper">
+<mapper namespace="xyz.flysium.dao.repository.AccountMapper">
 
   <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
-  <resultMap type="com.github.flysium.io.springboot.entity.Account" id="BaseResultMap">
+  <resultMap type="xyz.flysium.dao.entity.Account" id="BaseResultMap">
     <!-- column 表里的字段 -->
     <!-- property 实体对象里的属性 -->
     <id column="id" property="id" javaType="int"/>
@@ -40,7 +40,7 @@
   </select>
 
 
-  <insert id="add" parameterType="com.github.flysium.io.springboot.entity.Account">
+  <insert id="add" parameterType="xyz.flysium.dao.entity.Account">
     <!--  <insert id="add" parameterType="Account">-->  <!-- 需要配置 mybatis.type-aliases-package -->
     INSERT INTO account (login_name, password, nick_name, age, location)
     VALUES

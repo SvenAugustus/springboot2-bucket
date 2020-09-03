@@ -20,7 +20,7 @@ server:
   port: 9090
 
 mybatis:
-  type-aliases-package: com.github.flysium.io.springboot.entity
+  type-aliases-package: xyz.flysium.dao.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:
     # Mybatis仅支持association关联对象和collection关联集合对象的延迟加载，association指的就是一对一，collection指的就是一对多查询。

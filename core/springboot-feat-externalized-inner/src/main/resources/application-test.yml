@@ -1,4 +1,4 @@
 
-externalized-configuration-test-cover: 13-Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
-externalized-configuration-13-application-{profile}.properties-YAML: 13-Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
+application.externalized-configuration-test-cover: 13-Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
+application.externalized-configuration-13-application-{profile}.properties-YAML: 13-Profile-specific application properties packaged inside your jar (application-{profile}.properties and YAML variants).
 

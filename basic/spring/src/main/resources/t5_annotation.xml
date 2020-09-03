@@ -9,6 +9,6 @@
 >
 
   <!--  扫描指定包下的 带有Component标签的类，纳入spring管理 -->
-  <context:component-scan base-package="xyz.flysium.spring.samples.annotation"/>
+  <context:component-scan base-package="xyz.flysium.annotation"/>
 
 </beans>

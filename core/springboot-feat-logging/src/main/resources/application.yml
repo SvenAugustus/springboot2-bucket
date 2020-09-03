@@ -10,7 +10,7 @@ server:
 logging:
   level:
     root: info
-    com.github.flysium.io: debug
-  path: /opt/cache/webserver-logs
+    xyz.flysium: debug
+  #  path: /opt/cache/webserver-logs
   config: classpath:logback-spring.xml
 

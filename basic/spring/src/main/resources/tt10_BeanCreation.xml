@@ -27,10 +27,10 @@
     <context:exclude-filter type="regex" expression="xyz.flysium.spring.samples.annotation.*"/>
   </context:component-scan>
 
-  <bean id="myBean" class="xyz.flysium.spring.samples.MyBean" init-method="initMethod"
+  <bean id="myBean" class="xyz.flysium.MyBean" init-method="initMethod"
     destroy-method="destroyMethod">
   </bean>
 
-  <bean id="myFactoryBean" class="xyz.flysium.spring.samples.MyFactoryBean"/>
+  <bean id="myFactoryBean" class="xyz.flysium.MyFactoryBean"/>
 
 </beans>

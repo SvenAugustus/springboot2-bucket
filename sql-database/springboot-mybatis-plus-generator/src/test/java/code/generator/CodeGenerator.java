@@ -58,29 +58,28 @@ public class CodeGenerator {
 
     // 数据源配置
     DataSourceConfig dsc = new DataSourceConfig();
-    dsc.setUrl(
-        "jdbc:mysql://localhost:3306/demo?useUnicode=true&useSSL=false&characterEncoding=utf8");
-    // dsc.setSchemaName("public");
-    dsc.setDriverName("com.mysql.jdbc.Driver");
-    dsc.setUsername("root");
-    dsc.setPassword("root123");
-    mpg.setDataSource(dsc);
+    dsc.setUrl("jdbc:mysql://localhost:3306/demo?useUnicode=true&useSSL=false&characterEncoding=utf8");
+      // dsc.setSchemaName("public");
+      dsc.setDriverName("com.mysql.jdbc.Driver");
+      dsc.setUsername("root");
+      dsc.setPassword("root123");
+      mpg.setDataSource(dsc);
 
-    // 包配置
-    PackageConfig pc = new PackageConfig();
-    pc.setModuleName(scanner("模块名"));
-    pc.setParent("com.github.flysium.io.springboot");
-    mpg.setPackageInfo(pc);
+      // 包配置
+      PackageConfig pc = new PackageConfig();
+      pc.setModuleName(scanner("模块名"));
+      pc.setParent("xyz.flysium");
+      mpg.setPackageInfo(pc);
 
-    // 自定义配置
-    InjectionConfig cfg = new InjectionConfig() {
-      @Override
-      public void initMap() {
-        // to do nothing
-      }
-    };
+      // 自定义配置
+      InjectionConfig cfg = new InjectionConfig() {
+          @Override
+          public void initMap() {
+              // to do nothing
+          }
+      };
 
-    // 如果模板引擎是 freemarker
+      // 如果模板引擎是 freemarker
     String templatePath = "/templates/mapper.xml.ftl";
     // 如果模板引擎是 velocity
     // String templatePath = "/templates/mapper.xml.vm";

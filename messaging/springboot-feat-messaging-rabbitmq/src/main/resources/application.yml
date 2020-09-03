@@ -15,7 +15,7 @@ spring:
     password: mq123
     virtual-host: /
     # 开启生产 ACK
-    publisher-confirms: true
+    publisherConfirmType: SIMPLE
     # 开启发送失败退回
     publisher-returns: true
     template:

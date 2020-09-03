@@ -19,10 +19,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- namespace 对应到 接口上 就不需要实例化了 -->
-<mapper namespace="com.github.flysium.io.springboot.repository.UserMapper">
+<mapper namespace="xyz.flysium.dao.repository.UserMapper">
 
   <!-- 一对一关联 方式一 关联查询 begin -->
-  <select id="findById11" resultType="com.github.flysium.io.springboot.entity.User">
+  <select id="findById11" resultType="xyz.flysium.dao.entity.User">
     select u.id,
            u.name,
            r.id   as "role.id",
@@ -35,13 +35,13 @@
 
   <!-- 一对一关联 方式二 关联查询 begin -->
   <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
-  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap12">
+  <resultMap type="xyz.flysium.dao.entity.User" id="BaseResultMap12">
     <!-- column 表里的字段 -->
     <!-- property 实体对象里的属性 -->
     <id column="id" property="id" javaType="long"/>
     <result column="name" property="name"/>
     <association columnPrefix="role_" property="role"
-      javaType="com.github.flysium.io.springboot.entity.Role">
+      javaType="xyz.flysium.dao.entity.Role">
       <id column="id" property="id" javaType="long"/>
       <result column="name" property="name"/>
     </association>
@@ -61,13 +61,13 @@
 
   <!-- 一对一关联 方式三 嵌套查询 begin -->
   <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
-  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap13">
+  <resultMap type="xyz.flysium.dao.entity.User" id="BaseResultMap13">
     <!-- column 表里的字段 -->
     <!-- property 实体对象里的属性 -->
     <id column="id" property="id" javaType="long"/>
     <result column="name" property="name"/>
     <association column="role_id" foreignColumn="id" property="role"
-      select="com.github.flysium.io.springboot.repository.RoleMapper.findById"/>
+      select="xyz.flysium.dao.repository.RoleMapper.findById"/>
   </resultMap>
 
   <select id="findById13" resultMap="BaseResultMap13">
@@ -79,14 +79,14 @@
 
   <!-- 一对多关联 方式一 关联查询 begin -->
   <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
-  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap21">
+  <resultMap type="xyz.flysium.dao.entity.User" id="BaseResultMap21">
     <!-- column 表里的字段 -->
     <!-- property 实体对象里的属性 -->
     <id column="id" property="id" javaType="long"/>
     <result column="name" property="name"/>
     <!-- 一对一 private Role role; -->
     <association columnPrefix="role_" property="role"
-      javaType="com.github.flysium.io.springboot.entity.Role">
+      javaType="xyz.flysium.dao.entity.Role">
       <id column="id" property="id" javaType="long"/>
       <result column="name" property="name"/>
     </association>
@@ -96,7 +96,7 @@
       ofType：指定集合里面元素的类型
       -->
     <collection columnPrefix="permission_" property="permissionList"
-      ofType="com.github.flysium.io.springboot.entity.Permission">
+      ofType="xyz.flysium.dao.entity.Permission">
       <id column="id" property="id" javaType="long"/>
       <result column="name" property="name"/>
       <result column="uid" property="uid"/>
@@ -120,17 +120,17 @@
 
   <!-- 一对多关联 方式二 嵌套查询 begin -->
   <!-- POJO 对象和表之间的 字段和属性的映射关系     -->
-  <resultMap type="com.github.flysium.io.springboot.entity.User" id="BaseResultMap22">
+  <resultMap type="xyz.flysium.dao.entity.User" id="BaseResultMap22">
     <!-- column 表里的字段 -->
     <!-- property 实体对象里的属性 -->
     <id column="id" property="id" javaType="long"/>
     <result column="name" property="name"/>
     <!-- 一对一 private Role role; -->
     <association column="role_id" foreignColumn="id" property="role"
-      select="com.github.flysium.io.springboot.repository.RoleMapper.findById"/>
+      select="xyz.flysium.dao.repository.RoleMapper.findById"/>
     <!-- 一对多 private List<Permission> permissionList; -->
     <collection column="id" foreignColumn="uid" property="permissionList"
-      select="com.github.flysium.io.springboot.repository.PermissionMapper.findListByUserId"/>
+      select="xyz.flysium.dao.repository.PermissionMapper.findListByUserId"/>
   </resultMap>
 
   <select id="findById22" resultMap="BaseResultMap22">

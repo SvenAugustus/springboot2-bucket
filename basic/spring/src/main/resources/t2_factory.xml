@@ -5,14 +5,14 @@
 
 
   <!-- 工厂注入：动态工厂 -->
-  <bean id="carFactory" class="xyz.flysium.spring.samples.factory.CarFactory"/>
-  <bean id="car" class="xyz.flysium.spring.samples.factory.Car" factory-bean="carFactory"
+  <bean id="carFactory" class="xyz.flysium.factory.CarFactory"/>
+  <bean id="car" class="xyz.flysium.factory.Car" factory-bean="carFactory"
     factory-method="getCar">
     <constructor-arg value="changcheng"/>
   </bean>
 
   <!-- 工厂注入: 静态工厂 -->
-  <bean id="carStatic" class="xyz.flysium.spring.samples.factory.CarFactoryStatic"
+  <bean id="carStatic" class="xyz.flysium.factory.CarFactoryStatic"
     factory-method="getCar">
     <constructor-arg value="changcheng"/>
   </bean>

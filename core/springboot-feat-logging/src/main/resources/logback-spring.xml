@@ -22,7 +22,7 @@
 
   <springProperty scope="context" name="LOG_PATH" source="logging.path"/>
   <springProperty scope="context" name="ROOT_LEVEL" source="logging.level.root"/>
-  <springProperty scope="context" name="BUSINESS_LEVEL" source="logging.level.com.github.flysium.io"/>
+  <springProperty scope="context" name="BUSINESS_LEVEL" source="logging.level.xyz.flysium"/>
 
   <!-- Include Setting: Don't remove -->
   <include resource="logging/logback/logback-base.xml"/>

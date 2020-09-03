@@ -20,23 +20,23 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <!-- 循环依赖问题 -->
-  <!--  <bean id="a" class="xyz.flysium.spring.samples.circularreference.A">-->
+  <!--  <bean id="a" class="xyz.flysium.circularreference.A">-->
   <!--    <constructor-arg ref="b"/>-->
   <!--  </bean>-->
-  <!--  <bean id="b" class="xyz.flysium.spring.samples.circularreference.B" scope="prototype">-->
+  <!--  <bean id="b" class="xyz.flysium.circularreference.B" scope="prototype">-->
   <!--    <constructor-arg ref="c"/>-->
   <!--  </bean>-->
-  <!--  <bean id="c" class="xyz.flysium.spring.samples.circularreference.C" scope="prototype">-->
+  <!--  <bean id="c" class="xyz.flysium.circularreference.C" scope="prototype">-->
   <!--    <constructor-arg ref="a"/>-->
   <!--  </bean>-->
 
-  <bean id="a" class="xyz.flysium.spring.samples.circularreference.A">
+  <bean id="a" class="xyz.flysium.circularreference.A">
     <property name="b" ref="b"/>
   </bean>
-  <bean id="b" class="xyz.flysium.spring.samples.circularreference.B" scope="prototype">
+  <bean id="b" class="xyz.flysium.circularreference.B" scope="prototype">
     <property name="c" ref="c"/>
   </bean>
-  <bean id="c" class="xyz.flysium.spring.samples.circularreference.C" scope="prototype">
+  <bean id="c" class="xyz.flysium.circularreference.C" scope="prototype">
     <property name="a" ref="a"/>
   </bean>
 

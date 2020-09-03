@@ -1,8 +1,8 @@
 org.springframework.context.ApplicationListener=\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationStartingEventListener,\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationReadyEventListener,\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationPreparedEventListener,\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationStartedEventListener,\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationReadyEventListener,\
-    com.github.flysium.io.bucket.springboot.listeners.ApplicationFailedEventListener
+    xyz.flysium.listeners.ApplicationStartingEventListener,\
+    xyz.flysium.listeners.ApplicationReadyEventListener,\
+    xyz.flysium.listeners.ApplicationPreparedEventListener,\
+    xyz.flysium.listeners.ApplicationStartedEventListener,\
+    xyz.flysium.listeners.ApplicationReadyEventListener,\
+    xyz.flysium.listeners.ApplicationFailedEventListener
 

@@ -9,12 +9,7 @@ spring:
 
 logging:
   level:
-    com:
-      github:
-        flysium:
-          io:
-            example:
-              repository: DEBUG
+    xyz.flysium.dao: DEBUG
 
 # server
 server:

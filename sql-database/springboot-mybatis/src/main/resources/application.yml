@@ -1,19 +1,14 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    schema: classpath:schema-h2.sql
     url: jdbc:h2:mem:test
     username: sa
     password: sa
+    schema: classpath:schema-h2.sql
 
 logging:
   level:
-    com:
-      github:
-        flysium:
-          io:
-            springboot:
-              repository: DEBUG
+    xyz.flysium.dao: DEBUG
 
 # server
 server:

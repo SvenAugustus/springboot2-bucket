@@ -39,7 +39,6 @@
     where 1 = 1
   </select>
 
-
   <insert id="add" parameterType="xyz.flysium.dao.entity.Account">
     <!--  <insert id="add" parameterType="Account">-->  <!-- 需要配置 mybatis.type-aliases-package -->
     INSERT INTO account (login_name, password, nick_name, age, location)

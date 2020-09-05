@@ -27,9 +27,10 @@ import xyz.flysium.dao.entity.Account;
 //@CacheNamespace(flushInterval = 0) // 启用二级缓存, org.apache.ibatis.mapping.MappedStatement#
 public interface AccountMapper {
 
-  //  @Flush // 禁用一级缓存
-//  @Options(useCache = true)
-  List<Account> findAll();
+    //  @Flush // 禁用一级缓存
+    //  @Options(useCache = true)
+    List<Account> findAll();
 
-  void add(Account account);
+    void add(Account account);
+
 }

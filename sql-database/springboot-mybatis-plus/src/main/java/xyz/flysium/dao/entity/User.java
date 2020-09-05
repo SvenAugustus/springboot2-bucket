@@ -16,6 +16,8 @@
 
 package xyz.flysium.dao.entity;
 
+import java.util.Date;
+
 /**
  * @author Sven Augustus
  * @version 1.0
@@ -30,6 +32,8 @@ public class User {
 
     private String email;
 
+    private Date createdAt;
+
     public Long getId() {
         return id;
     }
@@ -39,12 +43,12 @@ public class User {
     }
 
     public String getName() {
-    return name;
-  }
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Integer getAge() {
         return age;
@@ -61,4 +65,25 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createAt) {
+        this.createdAt = createdAt;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("User{");
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", createdAt=").append(createdAt);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

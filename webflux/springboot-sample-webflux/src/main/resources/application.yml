@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-boot2-webflux
+
+# server
+server:
+  #  port: 80
+  port: 9021
+

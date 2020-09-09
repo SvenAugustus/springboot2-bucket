@@ -77,50 +77,49 @@
 
   <modules>
     <!-- spring -->
-    <module>basic/spring</module>
+    <module>00-basic/spring</module>
     <!-- springboot -->
-    <module>core/springboot-actuator</module>
-    <module>core/springboot-aop</module>
-    <module>core/springboot-async</module>
-    <module>core/springboot-feat-logging</module>
-    <module>core/springboot-feat-i18n</module>
+    <module>01-core/springboot-actuator</module>
+    <module>01-core/springboot-aop</module>
+    <module>01-core/springboot-async</module>
+    <module>01-core/springboot-feat-logging</module>
+    <module>01-core/springboot-feat-i18n</module>
     <!-- config, profile -->
-    <module>core/springboot-feat-banner</module>
-    <module>core/springboot-feat-application-events</module>
-    <module>core/springboot-feat-externalized-inner</module>
-    <module>core/springboot-feat-externalized-configuration</module>
-    <module>core/springboot-feat-profile</module>
+    <module>01-core/springboot-feat-banner</module>
+    <module>01-core/springboot-feat-application-events</module>
+    <module>01-core/springboot-feat-externalized-inner</module>
+    <module>01-core/springboot-feat-externalized-configuration</module>
+    <module>01-core/springboot-feat-profile</module>
     <!-- web -->
-    <module>mvc/springboot-feat-mvc</module>
-    <module>mvc/springboot-error-page</module>
-    <module>mvc/springboot-swagger</module>
-    <module>mvc/springboot-http-cache</module>
+    <module>02-mvc/springboot-feat-mvc</module>
+    <module>02-mvc/springboot-error-page</module>
+    <module>02-mvc/springboot-swagger</module>
+    <module>02-mvc/springboot-http-cache</module>
     <!-- webflux -->
-    <module>webflux/springboot-sample-webflux</module>
-    <!-- jaxrs jaxws -->
-    <module>jax/springboot-feat-jaxrs-cxf</module>
-    <module>jax/springboot-feat-jaxrs-jersey</module>
-    <module>jax/springboot-feat-jaxws-cxf</module>
+    <module>03-webflux/springboot-sample-webflux</module>
     <!-- sql -->
-    <module>sql-database/springboot-database-embedded</module>
-    <module>sql-database/springboot-jdbc-jndi</module>
-    <module>sql-database/springboot-jpa-simple</module>
-    <module>sql-database/springboot-mybatis</module>
-    <module>sql-database/springboot-mybatis-generator</module>
-    <module>sql-database/springboot-mybatis-plus</module>
-    <module>sql-database/springboot-mybatis-plus-generator</module>
+    <module>04-database/springboot-database-embedded</module>
+    <module>04-database/springboot-jdbc-jndi</module>
+    <module>04-database/springboot-jpa-simple</module>
+    <module>04-database/springboot-mybatis</module>
+    <module>04-database/springboot-mybatis-generator</module>
+    <module>04-database/springboot-mybatis-plus</module>
+    <module>04-database/springboot-mybatis-plus-generator</module>
     <!-- nosql -->
-    <module>nosql-data/springboot-cache</module>
-    <module>nosql-data/springboot-redis</module>
-    <module>nosql-data/springboot-mongodb</module>
+    <module>05-nosql/springboot-cache</module>
+    <module>05-nosql/springboot-redis</module>
+    <module>05-nosql/springboot-mongodb</module>
+    <!-- jaxrs jaxws -->
+    <module>06-jax-rs-ws/springboot-feat-jaxrs-cxf</module>
+    <module>06-jax-rs-ws/springboot-feat-jaxrs-jersey</module>
+    <module>06-jax-rs-ws/springboot-feat-jaxws-cxf</module>
     <!-- messaging -->
-    <module>messaging/springboot-feat-messaging-activemq</module>
-    <module>messaging/springboot-feat-messaging-artemis</module>
-    <module>messaging/springboot-feat-messaging-rocketmq</module>
-    <module>messaging/springboot-feat-messaging-rocketmq-integration</module>
-    <module>messaging/springboot-feat-messaging-rabbitmq</module>
-    <module>messaging/springboot-feat-messaging-kafka</module>
-
+    <module>07-messaging/springboot-feat-messaging-activemq</module>
+    <module>07-messaging/springboot-feat-messaging-artemis</module>
+    <module>07-messaging/springboot-feat-messaging-rocketmq</module>
+    <module>07-messaging/springboot-feat-messaging-rocketmq-integration</module>
+    <module>07-messaging/springboot-feat-messaging-rabbitmq</module>
+    <module>07-messaging/springboot-feat-messaging-kafka</module>
   </modules>
 
   <build>

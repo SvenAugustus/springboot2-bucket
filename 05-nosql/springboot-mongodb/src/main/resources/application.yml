@@ -8,5 +8,5 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/test
+      uri: mongodb://root:root123@127.0.0.1:27017/test
 

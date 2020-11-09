@@ -23,7 +23,7 @@
     <groupId>xyz.flysium.springboot</groupId>
     <artifactId>springboot-2-bucket-pom</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../../</relativePath>
+    <relativePath>../../pom.xml</relativePath>
   </parent>
 
   <artifactId>springboot-feat-i18n</artifactId>

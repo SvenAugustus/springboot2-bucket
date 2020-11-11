@@ -48,7 +48,7 @@ public class SwaggerConfiguration {
         .useDefaultResponseMessages(false)
         .select()
         .apis(RequestHandlerSelectors
-            .basePackage("com.github.flysium.io.bucket.springboot.controller"))
+            .basePackage("xyz.flysium.controller"))
 //        .paths(PathSelectors.ant("/app/*/**"))
         .paths(PathSelectors.any())
         .build();

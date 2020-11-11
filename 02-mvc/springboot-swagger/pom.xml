@@ -31,8 +31,9 @@
 
   <properties>
     <guava.version>26.0-jre</guava.version>
-    <springfox.version>2.9.2</springfox.version>
-    <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+    <springfox.version>2.10.5</springfox.version>
+    <!-- <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version> -->
+    <knife4j.version>3.0.1</knife4j.version>
   </properties>
 
   <dependencies>
@@ -43,7 +44,7 @@
       <version>${guava.version}</version>
     </dependency>
 
-    <dependency>
+  <!--  <dependency>
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger2</artifactId>
       <version>${springfox.version}</version>
@@ -52,11 +53,23 @@
       <groupId>io.springfox</groupId>
       <artifactId>springfox-swagger-ui</artifactId>
       <version>${springfox.version}</version>
-    </dependency>
-    <dependency>
+    </dependency> -->
+    <!--  Swagger-Bootstrap-UI is the front of the UI Swagger implementation,
+      using jQuery+bootstrap implementation,
+      the purpose is to replace the default UI Swagger implementation of the Swagger-UI,
+      so that the document is more friendly...  -->
+    <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/swagger-bootstrap-ui -->
+    <!--      <dependency>
       <groupId>com.github.xiaoymin</groupId>
       <artifactId>swagger-bootstrap-ui</artifactId>
       <version>${swagger-bootstrap-ui.version}</version>
+    </dependency>-->
+    <!-- https://gitee.com/xiaoym/knife4j -->
+    <!-- https://mvnrepository.com/artifact/com.github.xiaoymin/knife4j-spring-boot-starter -->
+    <dependency>
+      <groupId>com.github.xiaoymin</groupId>
+      <artifactId>knife4j-spring-boot-starter</artifactId>
+      <version>${knife4j.version}</version>
     </dependency>
 
     <!-- Spring Boot application starters -->

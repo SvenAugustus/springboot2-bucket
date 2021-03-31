@@ -30,7 +30,7 @@
   <packaging>jar</packaging>
 
   <properties>
-    <guava.version>26.0-jre</guava.version>
+    <guava.version>29.0-jre</guava.version>
     <springfox.version>2.10.5</springfox.version>
     <!-- <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version> -->
     <knife4j.version>3.0.1</knife4j.version>
